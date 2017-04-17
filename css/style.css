@@ -1,0 +1,190 @@
+a:link,
+a:visited {
+  color: #fff;
+  text-decoration: underline;
+}
+
+a:hover,
+a:active {
+  color: #A974C5;
+}
+
+html,
+body {
+  background: url('img/purple.jpg') repeat left top;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h1 a:link,
+h1 a:visited {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  font-family: 'Josefin Slab', serif;
+  text-shadow: 0 -1px #000;
+}
+
+img {
+  border: 0;
+}
+
+nav {
+  margin-bottom: 40px;
+  margin-top: -20px;
+  position:relative;
+  right: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav strong {
+  color: #fff;
+  font-size: 22px;
+}
+
+nav a {
+  font-size: 22px;
+}
+
+p {
+  color: #fff;
+  font-size: 22px;
+}
+
+pre {
+  background: transparent;
+  border: 0;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+}
+
+.lead {
+  margin-bottom: 10px;
+}
+
+.separator {
+  color: #fff;
+}
+
+.example {
+  text-align: center;
+}
+
+
+.example pre {
+  width: 600px;
+}
+
+.example .hljs {
+  border-radius: 4px;
+}
+
+.example img,
+#preview img {
+  border: 10px solid #fff;
+  box-shadow: 3px 6px 5px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+
+.help-block {
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+#preview {
+  text-align:left;
+}
+#preview small {
+  color: #fff;
+}
+.radio label {
+  color: #fff;
+}
+
+.sidebar {
+  position: fixed;
+  top: 200px;
+  width: 225px;
+}
+
+.sidebar li {
+  display: block;
+  text-align: left;
+}
+
+.sidebar li ul {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li ul li {
+  border-left: 1px solid #fff;
+  margin: 5px 0;
+  padding-left: 15px;
+}
+
+.sidebar li ul li a {
+  font-size: 14px;
+}
+
+.sidebar .nav {
+  margin:0;
+  padding:0;
+}
+
+#pooling-example img {
+  width: 100%;
+  height: auto;
+}
+
+#pooling-example .row {
+  margin-bottom: 30px;
+}
+footer {
+  padding-top: 1em;
+}
+footer p {
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+}
+input:disabled + img {
+  opacity: 0.2;
+}

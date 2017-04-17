@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <title>waterMene</title>
+  <script src="./scripts/watermark.js"></script>
+  <script src="./scripts/upload.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Slab|Maven+Pro' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center">WaterMene</h1>
+
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <p class="lead">
+          <small>
+          Envie o seu Mene, escolha a marca d'água (waterMene), e salve o resultado.
+          <br>
+          Mais rápido que o feriado.
+          </small>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <button class="btn btn-default" id="reloader" style="display:none" onclick="window.location.reload()">
+          <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+          Começar denovo
+        </button>
+        <form action="" id="uploadForm" method="POST" style="margin-top: 45px;">
+          <div class="input-group" id="targetForm">
+            <span class="input-group-btn">
+              <span class="btn btn-primary btn-file">
+                Enviar&hellip; <input type="file" id="target">
+              </span>
+            </span>
+            <input type="text" class="form-control" readonly>
+          </div>
+          <span class="help-block" id="targetHelp">
+            Primeiramente envie seu mene
+          </span>
+          <div class="input-group" style="display:none">
+            <span class="input-group-btn">
+              <span id="watermark-button" type="button" class="btn btn-primary btn-file" disabled>
+                Selecionar&hellip; <input type="file" id="watermark">
+              </span>
+            </span>
+            <input type="text" class="form-control" id="watermark-name" readonly>
+          </div>
+          <div class="radio">
+             <label>
+               <input type="radio" name="watermene" value="img/marca01.png" checked disabled>
+               <img src="img/marca01.png" alt="01">
+             </label>
+             <label>
+               <input type="radio" name="watermene" value="img/marca02.png" disabled>
+               <img src="img/marca02.png" alt="02">
+             </label>
+             <label>
+               <input type="radio" name="watermene" value="img/marca03.png" disabled>
+               <img src="img/marca03.png" alt="03">
+             </label>
+             <label>
+               <input type="radio" name="watermene" value="img/marca04.png" disabled>
+               <img src="img/marca04.png" alt="04">
+             </label>
+             <label>
+               <input type="radio" name="watermene" value="img/marca05.png" disabled>
+               <img src="img/marca05.png" alt="05">
+             </label>
+             <label>
+               <input type="radio" name="watermene" value="img/marca06.png" disabled>
+               <img src="img/marca06.png" alt="06">
+             </label>
+             <label>
+               <input type="radio" name="watermene" value="img/marca07.png" disabled>
+               <img src="img/marca07.png" alt="07">
+             </label>
+          </div>
+          <span class="help-block">
+            Selecione o WaterMene a ser usado
+          </span>
+          <div class="input-group">
+            <h3>Posição</h3>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="radio">
+                  <label><input type="radio" name="position" value="lowerRight" checked disabled>Inferior Direito</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="position" value="lowerLeft" disabled>Inferior Esquerdo</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="position" value="upperRight" disabled>Superior Direito</label>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="radio">
+                  <label><input type="radio" name="position" value="upperLeft" disabled>Superior Esquerdo</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="position" value="center" disabled>Centro</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-offset-1 col-md-7" id="preview" style="display:none">
+        <h2 class="text" style="margin-top:0">Prévia</h2>
+        <small>Clique com o botão direito, escolha "Salvar imagem como..."</small>
+      </div>
+    </div>
+    <footer>
+      <div class="row">
+        <div class="col-xs-12">
+          <p class="footer-text">
+            Criado com base no <a href="http://brianium.github.io/watermarkjs">WatermarkJS</a>, projeto de Código Aberto. Aliás, essa página é basicamente o exemplo de Upload modificado.
+            <br>
+            Mais rápido que o feriado.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div style="display:none">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Access Key ID" id="accessKeyId" disabled />
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Policy" id="policy" disabled />
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Signature" id="signature" disabled />
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Bucket" id="bucket" disabled />
+          </div>
+  </div>
+          
+</body>
+
+</html>
