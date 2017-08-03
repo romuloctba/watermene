@@ -622,6 +622,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.lowerLeft = lowerLeft;
 	exports.upperLeft = upperLeft;
 	exports.center = center;
+	exports.custom = custom;
 	/**
 	 * Return a function for positioning a watermark on a target canvas
 	 *
@@ -716,6 +717,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return (target.width - mark.width) / 2;
 	  }, function (target, mark) {
 	    return (target.height - mark.height) / 2;
+	  }, alpha);
+	}
+
+	/**
+	 * Place the watermark in a custom position relative to the target
+	 * image
+	 *
+	 * @param {Number} alpha
+	 * @return {Function}
+	 */
+	function custom(alpha, customX, customY) {
+		return atPos(function (target, mark) {
+	    return (target.width - mark.width) * (customX / 100);
+	  }, function (target, mark) {
+	    return (target.height - mark.height) * (customY / 100);
 	  }, alpha);
 	}
 

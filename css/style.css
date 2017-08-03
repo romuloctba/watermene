@@ -134,7 +134,7 @@ pre {
 #preview small {
   color: #fff;
 }
-.radio label {
+.radio label, .range label {
   color: #fff;
 }
 

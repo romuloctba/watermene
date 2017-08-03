@@ -105,31 +105,49 @@
                <img src="img/marca13.png" alt="13">
              </label>
           </div>
-          <div class="input-group">
-            <h3>Posição</h3>
-            <div class="row">
-              <div class="col-xs-6">
-                <div class="radio">
-                  <label><input type="radio" name="position" value="lowerRight" checked disabled>Inferior Direito</label>
-                </div>
-                <div class="radio">
-                  <label><input type="radio" name="position" value="lowerLeft" disabled>Inferior Esquerdo</label>
-                </div>
-                <div class="radio">
-                  <label><input type="radio" name="position" value="upperRight" disabled>Superior Direito</label>
-                </div>
+        </form>
+      </div>
+      <div class="col-md-offset-1 col-md-7">
+        <div class="input-group col-xs-12">
+          <h3>Posição</h3>
+          <div class="row">
+            <div class="col-xs-4">
+              <div class="radio">
+                <label><input type="radio" name="position" value="lowerRight" checked disabled>Inferior Direito</label>
               </div>
-              <div class="col-xs-6">
-                <div class="radio">
-                  <label><input type="radio" name="position" value="upperLeft" disabled>Superior Esquerdo</label>
-                </div>
-                <div class="radio">
-                  <label><input type="radio" name="position" value="center" disabled>Centro</label>
-                </div>
+              <div class="radio">
+                <label><input type="radio" name="position" value="lowerLeft" disabled>Inferior Esquerdo</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="position" value="upperRight" disabled>Superior Direito</label>
+              </div>
+            </div>
+            <div class="col-xs-4">
+              <div class="radio">
+                <label><input type="radio" name="position" value="upperLeft" disabled>Superior Esquerdo</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="position" value="center" disabled>Centro</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="position" value="custom" disabled>Customizar</label>
               </div>
             </div>
           </div>
-        </form>
+          <div class="row" id="range" style="display:none;">
+            <div class="col-xs-4"></div>
+            <div class="col-xs-3">
+              <div class="range" >
+                <label>Horizontal: <span id="horizontal-span">50</span><input type="range" min="0" max="100" value="50" name="horizontal"></label>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div class="range" >
+                <label>Vertical: <span id="vertical-span">50</span><input type="range" min="0" max="100" value="50" name="vertical"></label>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-md-offset-1 col-md-7" id="preview" style="display:none">
         <h2 class="text" style="margin-top:0">Prévia</h2>

@@ -74,14 +74,21 @@
   function setWatermark(file) {
     var preview = document.getElementById('preview'),
         img = preview.querySelector('img'),
-        position = document.querySelector('input[name=position]:checked').value;
+        position = document.querySelector('input[name=position]:checked').value,
+        posX,
+        posY;
 
     if (! original) {
       original = img;
     }
 
+    if (position === "custom") {
+      posX = document.querySelector('input[name=horizontal]').value;
+      posY = document.querySelector('input[name=vertical]').value;
+    }
+
     watermark([original, file])
-      .image(watermark.image[position](0.8))
+      .image(watermark.image[position](0.8, posX, posY))
       .then(function(marked) {
         preview.replaceChild(marked, img);
         // enableFields(awsFields);
@@ -173,6 +180,14 @@
       }
 
       if (input.type === 'radio' && isWatermarkSelected()) {
+        var pos_range = document.getElementById("range");
+        pos_range.style.display = (input.value === 'custom') ? 'block' : 'none';
+        setWatermark(document.querySelector("input[name='watermene']:checked").value);
+      }
+
+      if (input.type === 'range' && isWatermarkSelected()) {
+        document.getElementById("horizontal-span").innerHTML = document.querySelector("input[name='horizontal']").value;
+        document.getElementById("vertical-span").innerHTML = document.querySelector("input[name='vertical']").value;
         setWatermark(document.querySelector("input[name='watermene']:checked").value);
       }
     });
