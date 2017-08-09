@@ -1,7 +1,7 @@
 # watermene
 Add watermark to you mene
 
-Contributions are wellcome
+Contributions are welcome
 
 We need:
 
