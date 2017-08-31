@@ -134,8 +134,20 @@ pre {
 #preview small {
   color: #fff;
 }
+.radio {
+  max-height: 400px;
+  overflow: auto;
+}
+
 .radio label, .range label {
   color: #fff;
+}
+
+.radio label {
+  margin: 0 5px;
+}
+.radio label img {
+  width: 100px;
 }
 
 .sidebar {
