@@ -1,4 +1,4 @@
-# watermene
+# WaterMene
 Add watermark to you mene
 
 Contributions are welcome
