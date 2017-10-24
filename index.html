@@ -3,11 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>waterMene</title>
+  <title>WaterMene</title>
 
   <!--style files-->
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <link rel="stylesheet" type="text/css" href="assets/css/highlight.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Josefin+Slab|Maven+Pro">
@@ -41,11 +40,17 @@
         <div class="input-group" id="targetForm">
             <span class="input-group-btn">
               <span class="btn btn-primary btn-file">
-                Enviar ... <input type="file" id="target">
+                Enviar&hellip; <input type="file" id="target">
               </span>
             </span>
           <input type="text" class="form-control" readonly>
         </div>
+
+        <!--retry button-->
+        <button class="btn btn-default" id="reloader" style="display:none" onclick="window.location.reload()">
+          <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+          Começar denovo
+        </button>
 
         <!--descricao-->
         <span class="help-block" id="targetHelp">
@@ -147,12 +152,6 @@
         </label>
         </div>
       </form>
-
-      <!--retry button-->
-      <button class="btn btn-default" id="reloader" style="display:none" onclick="window.location.reload()">
-        <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
-        Começar denovo
-      </button>
 
     </div>
 
