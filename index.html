@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>WaterMene</title>
+  <title>WaterMene Generator</title>
 
   <!--style files-->
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -52,7 +52,7 @@
           Começar denovo
         </button>
 
-        <!--descricao-->
+        <!--description-->
         <span class="help-block" id="targetHelp">
             Primeiramente envie seu mene
         </span>
@@ -61,96 +61,8 @@
             <strong>Atenção: Nem todos os watermenes são <em>compliance</em> com a regras do grupo. Contacte o SAC/Moderação em caso de dúvida.</strong>
           </span>
 
-        <!--selos-->
-        <div class="radio">
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca00.png" checked disabled>
-            <img src="assets/img/seals/marca00.png" alt="01">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca01.png" disabled>
-            <img src="assets/img/seals/marca01.png" alt="01">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca02.png" disabled>
-            <img src="assets/img/seals/marca02.png" alt="02">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca03.png" disabled>
-            <img src="assets/img/seals/marca03.png" alt="03">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca04.png" disabled>
-            <img src="assets/img/seals/marca04.png" alt="04">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca05.png" disabled>
-            <img src="assets/img/seals/marca05.png" alt="05">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca06.png" disabled>
-            <img src="assets/img/seals/marca06.png" alt="06">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca07.png" disabled>
-            <img src="assets/img/seals/marca07.png" alt="07">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca10.png" disabled>
-            <img src="assets/img/seals/marca10.png" alt="10">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca11.png" disabled>
-            <img src="assets/img/seals/marca11.png" alt="11">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca12.png" disabled>
-            <img src="assets/img/seals/marca12.png" alt="12">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca13.png" disabled>
-            <img src="assets/img/seals/marca13.png" alt="13">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca14.png" disabled>
-            <img src="assets/img/seals/marca14.png" alt="14">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca15.png" disabled>
-            <img src="assets/img/seals/marca15.png" alt="15">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca16.png" disabled>
-            <img src="assets/img/seals/marca16.png" alt="16">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca17.png" disabled>
-            <img src="assets/img/seals/marca17.png" alt="17">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca18.png" disabled>
-            <img src="assets/img/seals/marca18.png" alt="18">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca19.png" disabled>
-            <img src="assets/img/seals/marca19.png" alt="19">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca20.png" disabled>
-            <img src="assets/img/seals/marca20.png" alt="20">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca21.png" disabled>
-            <img src="assets/img/seals/marca21.png" alt="21">
-          </label>
-          <label>
-            <input type="radio" name="watermene" value="assets/img/seals/marca22.png" disabled>
-            <img src="assets/img/seals/marca22.png" alt="22">
-          </label><label>
-          <input type="radio" name="watermene" value="assets/img/seals/marca23.png" disabled>
-          <img src="assets/img/seals/marca23.png" alt="23">
-        </label>
-        </div>
+        <!--seals-->
+        <div class="radio" id="seals-div"></div>
       </form>
 
     </div>
@@ -237,6 +149,7 @@
     ga('create', 'UA-97700692-1', 'auto');
     ga('send', 'pageview');
 </script>
+<script src="assets/js/custom.js"></script>
 <script src="assets/js/watermark.min.js"></script>
 <script src="assets/js/upload.min.js"></script>
 
