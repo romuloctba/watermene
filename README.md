@@ -13,5 +13,5 @@ We need:
 
 How add new seal:
 
-- Add ne image on img/seals path
-- include url o seals.json file
+- Add new image on img/seals path (please follow naming standard)
+- include url on seals.json file (duplicate last line and change numbers)
