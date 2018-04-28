@@ -12,7 +12,7 @@ a:active {
 html,
 body {
   background: url('../img/theme/purple.jpg') repeat left top;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Muli', sans-serif;
 }
 
 h1 {
@@ -26,38 +26,16 @@ h1 a:visited {
 
 h1, h2, h3, h4, h5, h6 {
   color: #fff;
-  font-family: 'Josefin Slab', serif;
+  font-family: 'Oswald', sans-serif;
   text-shadow: 0 -1px #000;
+}
+
+.navbar-brand {
+	font-family: 'Oswald', sans-serif;
 }
 
 img {
   border: 0;
-}
-
-nav {
-  margin-bottom: 40px;
-  margin-top: -20px;
-  position:relative;
-  right: 20px;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-}
-
-nav li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-nav strong {
-  color: #fff;
-  font-size: 22px;
-}
-
-nav a {
-  font-size: 22px;
 }
 
 p {

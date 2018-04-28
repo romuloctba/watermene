@@ -2,156 +2,153 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <title>WaterMene</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>WaterMene</title>
 
-  <!--style files-->
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/highlight.min.css">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Josefin+Slab|Maven+Pro">
+	<!--style files-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/highlight.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Muli|Oswald" rel="stylesheet">
 </head>
 
 <body>
-<div class="container">
 
-  <!--title-->
-  <h1 class="text-center">WaterMene</h1>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<h1 class="navbar-brand mb-0 h1">WaterMene</h1>
+	</nav>
 
-  <div class="row">
-    <!--page description-->
-    <div class="col-xs-12 text-center">
-      <p class="lead">
-        <small>
-          Envie o seu Mene, escolha a marca d'água (waterMene), e salve o resultado.
-          <br>
-          Mais rápido que o feriado.
-        </small>
-      </p>
-    </div>
-  </div>
+	<div class="container">
+		<div class="row">
+			<!--page description-->
 
-  <div class="row">
-    <!--upload form-->
-    <div class="col-md-4">
-      <form action="" id="uploadForm" method="POST" style="margin-top: 45px;">
+		<div class="row">
+			<!--upload form-->
+			<div class="col-md-6">
+				<form action="" id="uploadForm" method="POST" style="margin-top: 45px;">
 
-        <!--input button-->
-        <div class="input-group" id="targetForm">
-            <span class="input-group-btn">
-              <span class="btn btn-primary btn-file">
-                Enviar&hellip; <input type="file" id="target">
-              </span>
-            </span>
-          <input type="text" class="form-control" readonly>
-        </div>
+					<!--input button-->
+					<div class="input-group" id="targetForm">
+						<span class="input-group-btn">
+							<span class="btn btn-primary btn-file">
+								Enviar&hellip; <input type="file" id="target">
+							</span>
+						</span>
+						<input type="text" class="form-control" readonly>
+					</div>
 
-        <!--retry button-->
-        <button class="btn btn-default" id="reloader" style="display:none" onclick="window.location.reload()">
-          <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
-          Começar denovo
-        </button>
+					<!--retry button-->
+					<button class="btn btn-default" id="reloader" style="display:none" onclick="window.location.reload()">
+						<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+						Começar denovo
+					</button>
 
-        <!--description-->
-        <span class="help-block" id="targetHelp">
-            Primeiramente envie seu mene
-        </span>
-        <span class="help-block">
-            Depois, selecione o WaterMene a ser usado. <br>
-            <strong>Atenção: Nem todos os watermenes são <em>compliance</em> com a regras do grupo. Contacte o SAC/Moderação em caso de dúvida.</strong>
-          </span>
+					<!--description-->
+					<span class="help-block" id="targetHelp">
+						Primeiramente envie seu mene
+					</span>
+					<span class="help-block">
+						Depois, selecione o WaterMene a ser usado. <br>
+						<strong>Atenção: Nem todos os watermenes são <em>compliance</em> com a regras do grupo. Contacte o SAC/Moderação em caso de dúvida.</strong>
+					</span>
 
-        <!--seals-->
-        <div class="radio" id="seals-div"></div>
-      </form>
+					<!--seals-->
+					<div class="radio" id="seals-div"></div>
+				</form>
 
-    </div>
+			</div>
 
-    <!--config seal-->
-    <div class="col-md-offset-1 col-md-7">
-      <div class="input-group col-xs-12">
-        <h3>Posição</h3>
-        <div class="row">
-          <div class="col-xs-4">
-            <div class="radio">
-              <label><input type="radio" name="position" value="lowerRight" checked disabled>Inferior Direito</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="position" value="lowerLeft" disabled>Inferior Esquerdo</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="position" value="upperRight" disabled>Superior Direito</label>
-            </div>
-          </div>
-          <div class="col-xs-4">
-            <div class="radio">
-              <label><input type="radio" name="position" value="upperLeft" disabled>Superior Esquerdo</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="position" value="center" disabled>Centro</label>
-            </div>
-            <div class="radio">
-              <label><input type="radio" name="position" value="custom" disabled><strong>Customizar</strong></label>
-            </div>
-          </div>
-        </div>
-        <div class="row" id="range" style="display:none;">
-          <div class="col-xs-4"></div>
-          <div class="col-xs-3">
-            <div class="range" >
-              <label>Horizontal: <span id="horizontal-span">50</span><input type="range" min="0" max="100" value="50" name="horizontal"></label>
-            </div>
-          </div>
-          <div class="col-xs-3">
-            <div class="range" >
-              <label>Vertical: <span id="vertical-span">50</span><input type="range" min="0" max="100" value="50" name="vertical"></label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+			<!--config seal-->
+			<div class="col-md-6">
+				<div class="input-group col-xs-12">
+					<h3>Posição</h3>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="radio">
+								<label><input type="radio" name="position" value="lowerRight" checked disabled>Inferior Direito</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="position" value="lowerLeft" disabled>Inferior Esquerdo</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="position" value="upperRight" disabled>Superior Direito</label>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="radio">
+								<label><input type="radio" name="position" value="upperLeft" disabled>Superior Esquerdo</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="position" value="center" disabled>Centro</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="position" value="custom" disabled><strong>Customizar</strong></label>
+							</div>
+						</div>
+					</div>
+					<div class="row" id="range" style="display:none;">
+						<div class="col-xs-4"></div>
+						<div class="col-xs-3">
+							<div class="range" >
+								<label>Horizontal: <span id="horizontal-span">50</span><input type="range" min="0" max="100" value="50" name="horizontal"></label>
+							</div>
+						</div>
+						<div class="col-xs-3">
+							<div class="range" >
+								<label>Vertical: <span id="vertical-span">50</span><input type="range" min="0" max="100" value="50" name="vertical"></label>
+							</div>
+						</div>
+					</div>
+				</div>
 
-    <!--instructions-->
-    <div class="col-md-offset-1 col-md-7" id="preview" style="display:none">
-      <h2 class="text" style="margin-top:0">Prévia</h2>
-      <small>Clique com o botão direito, escolha "Salvar imagem como..."</small>
-      <br>
-      <small>
-        <strong>
-          Dica: Se a imagem ficou grandona, basta mudar a marca d'água uma vez, que ela se arruma (sim, é um bug)
-        </strong>
-      </small>
-    </div>
-  </div>
 
-  <!--footer-->
-  <footer>
-    <div class="row">
-      <div class="col-xs-12">
-        <p class="footer-text">
-          Criado com base no <a href="http://brianium.github.io/watermarkjs">WatermarkJS</a>, projeto de Código Aberto. Aliás, essa página é basicamente o exemplo de Upload modificado.
-          <br>
-          Mais rápido que o feriado.
-          <br>
-          <small><em>Obs: Este é um projeto de código aberto. Você pode conferir o código, contribuir, copiar, e etc em <a href="https://github.com/romuloctba/watermene">https://github.com/romuloctba/watermene</a></em></small>
-        </p>
-      </div>
-    </div>
-  </footer>
-</div>
+				<!--instructions-->
+				<div class="col-md-offset-1 col-md-7" id="preview" style="display:none">
+					<h2 class="text" style="margin-top:0">Prévia</h2>
+					<small>Clique com o botão direito, escolha "Salvar imagem como..."</small>
+					<br>
+					<small>
+						<strong>
+							Dica: Se a imagem ficou grandona, basta mudar a marca d'água uma vez, que ela se arruma (sim, é um bug)
+						</strong>
+					</small>
+				</div>
 
-<!--script files-->
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-97700692-1', 'auto');
-    ga('send', 'pageview');
+			</div>
+		</div>
+
+		<!--footer-->
+		<footer>
+			<div class="row">
+				<div class="col-xs-12">
+					<p class="footer-text">
+						Criado com base no <a href="http://brianium.github.io/watermarkjs">WatermarkJS</a>, projeto de Código Aberto. Aliás, essa página é basicamente o exemplo de Upload modificado.
+						<br>
+						Mais rápido que o feriado.
+						<br>
+						<small><em>Obs: Este é um projeto de código aberto. Você pode conferir o código, contribuir, copiar, e etc em <a href="https://github.com/romuloctba/watermene">https://github.com/romuloctba/watermene</a></em></small>
+					</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<!--script files-->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-97700692-1', 'auto');
+	ga('send', 'pageview');
 </script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="assets/js/custom.js"></script>
 <script src="assets/js/watermark.min.js"></script>
 <script src="assets/js/upload.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
