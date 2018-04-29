@@ -17,6 +17,7 @@
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<h1 class="navbar-brand mb-0 h1">WaterMene</h1>
+		<small class="navbar-text ml-auto">Atenção: Nem todos os watermenes são <em>compliance</em> com a regras do grupo. Contacte o SAC/Moderação em caso de dúvida.</small>
 	</nav>
 
 	<div class="container">
@@ -26,8 +27,9 @@
 		<div class="row">
 			<!--upload form-->
 			<div class="col-md-6">
-				<form action="" id="uploadForm" method="POST" style="margin-top: 45px;">
+				<form action="" id="uploadForm" method="POST">
 
+					<h2>1. Envie seu mene</h2>
 					<!--input button-->
 					<div class="input-group" id="targetForm">
 						<span class="input-group-btn">
@@ -35,7 +37,7 @@
 								Enviar&hellip; <input type="file" id="target">
 							</span>
 						</span>
-						<input type="text" class="form-control" readonly>
+						<input type="text" class="form-control" readonly style="display: none;">
 					</div>
 
 					<!--retry button-->
@@ -44,25 +46,30 @@
 						Começar denovo
 					</button>
 
-					<!--description-->
-					<span class="help-block" id="targetHelp">
-						Primeiramente envie seu mene
-					</span>
-					<span class="help-block">
-						Depois, selecione o WaterMene a ser usado. <br>
-						<strong>Atenção: Nem todos os watermenes são <em>compliance</em> com a regras do grupo. Contacte o SAC/Moderação em caso de dúvida.</strong>
-					</span>
+					<!--instructions-->
+					<div class="preview-wrapper">
+						<h2>2. Preview</h2>
+						<div class="" id="preview" style="display:none">
+						</div>
+						<footer id="preview-footer">
+							<small>
+								Dica: Se a imagem ficou grandona, basta mudar a marca d'água uma vez, que ela se arruma (sim, é um bug)
+							</small>
+						</footer>
+					</div>
 
-					<!--seals-->
-					<div class="radio" id="seals-div"></div>
 				</form>
 
 			</div>
 
 			<!--config seal-->
 			<div class="col-md-6">
+				<h2>3. Selos</h2>
+				<!--seals-->
+				<div class="radio" id="seals-div"></div>
+
 				<div class="input-group col-xs-12">
-					<h3>Posição</h3>
+					<h2>4. Posição</h2>
 					<div class="row">
 						<div class="col-xs-4">
 							<div class="radio">
@@ -102,19 +109,6 @@
 					</div>
 				</div>
 
-
-				<!--instructions-->
-				<div class="col-md-offset-1 col-md-7" id="preview" style="display:none">
-					<h2 class="text" style="margin-top:0">Prévia</h2>
-					<small>Clique com o botão direito, escolha "Salvar imagem como..."</small>
-					<br>
-					<small>
-						<strong>
-							Dica: Se a imagem ficou grandona, basta mudar a marca d'água uma vez, que ela se arruma (sim, é um bug)
-						</strong>
-					</small>
-				</div>
-
 			</div>
 		</div>
 
@@ -147,7 +141,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="assets/js/custom.js"></script>
 <script src="assets/js/watermark.min.js"></script>
-<script src="assets/js/upload.min.js"></script>
+<script src="assets/js/upload.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 
 </body>
