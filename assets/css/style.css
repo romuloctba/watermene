@@ -115,20 +115,58 @@ pre {
 	display: none;
 }
 
-.radio {
+#seals-div {
   max-height: 400px;
   overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.radio label, .range label {
+#seals-div label, .range label {
   color: #fff;
 }
 
-.radio label {
-  margin: 0 5px;
-}
-.radio label img {
+#seals-div label {
+  margin: 10px 5px;
+  height: 100px;
   width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#seals-div label input {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: visible;
+	z-index: 10;
+}
+
+#seals-div label img {
+  max-width: 100px;
+  max-height: 100px;
+  position: relative;
+  z-index: 5;
+}
+
+#seals-div label input:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 0;
+	bottom: 0;
+	background: rgba( 255, 255, 255, 0.3);
+	opacity: 0;
+	z-index: 0;
+	transition: .3s all ease;
+}
+
+#seals-div label input:checked:after {
+	opacity: 1;
 }
 
 .sidebar {
