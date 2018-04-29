@@ -1,6 +1,5 @@
 a:link,
 a:visited {
-  color: #fff;
 }
 
 a:hover,
@@ -10,8 +9,22 @@ a:active {
 
 html,
 body {
-  background: url('../img/theme/purple.jpg') repeat left top;
   font-family: 'Muli', sans-serif;
+  background-image: url('../img/theme/pattern-mene.png'), linear-gradient(-45deg, #ff9574, #f66ca2, #6cd8fe, #66ffdc, #d7ff74);
+  background-size: auto, 300% 200%;
+  animation: Gradient 15s linear infinite;
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 0%, 0% 50%;
+	}
+	50% {
+		background-position: 0% -200px, 100% 50%;
+	}
+	100% {
+		background-position: 0% -400px, 0% 50%;
+	}
 }
 
 h1 {
@@ -23,7 +36,6 @@ h2 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #fff;
   font-family: 'Oswald', sans-serif;
   text-shadow: 0 -1px #000;
 }
