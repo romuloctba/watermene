@@ -18,3 +18,11 @@ loadJSON(function(response) {
       document.getElementById('seals-div').innerHTML += '<label><input type="radio" name="watermene" value="'+jsonresponse[key]+'" checked disabled><img src="'+jsonresponse[key]+'" alt="01"></label>';
     });
 });
+
+// Image download
+var downloadButton = document.getElementById('btn-download');
+
+downloadButton.addEventListener( 'click', function(e){
+	var imgsrc = document.querySelector('#preview img').src;
+	downloadButton.setAttribute('href', imgsrc );
+});

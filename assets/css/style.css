@@ -1,7 +1,6 @@
 a:link,
 a:visited {
   color: #fff;
-  text-decoration: underline;
 }
 
 a:hover,
@@ -17,11 +16,6 @@ body {
 
 h1 {
   font-size: 72px;
-}
-
-h1 a:link,
-h1 a:visited {
-  text-decoration: none;
 }
 
 h2 {
