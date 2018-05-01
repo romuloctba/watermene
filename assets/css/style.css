@@ -7,15 +7,7 @@ a:active {
   color: #A974C5;
 }
 
-html,
-body {
-  font-family: 'Muli', sans-serif;
-  background-image: url('../img/theme/pattern-mene.png'), linear-gradient(-45deg, #ff9574, #f66ca2, #6cd8fe, #66ffdc, #d7ff74);
-  background-size: auto, 300% 200%;
-  animation: Gradient 15s linear infinite;
-}
-
-@keyframes Gradient {
+@keyframes gradient-pattern {
 	0% {
 		background-position: 0% 0%, 0% 50%;
 	}
@@ -25,6 +17,26 @@ body {
 	100% {
 		background-position: 0% -400px, 0% 50%;
 	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+html,
+body {
+  font-family: 'Muli', sans-serif;
+  background-image: url('../img/theme/pattern-mene.png'), linear-gradient(-45deg, #ff9574, #f66ca2, #6cd8fe, #66ffdc, #d7ff74);
+  background-size: auto, 300% 200%;
+  animation: gradient-pattern 15s linear infinite;
 }
 
 h1 {
@@ -142,6 +154,7 @@ pre {
   margin: 10px 5px;
   height: 100px;
   width: 100px;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,20 +163,20 @@ pre {
 
 #seals-div label input {
 	position: absolute;
-	left: 0;
-	bottom: 0;
+	left: 1px;
+	bottom: 1px;
 	overflow: visible;
 	z-index: 10;
 }
 
 #seals-div label img {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 90px;
+  max-height: 90px;
   position: relative;
   z-index: 5;
 }
 
-#seals-div label input:after {
+#seals-div label span:after {
 	content: '';
 	display: block;
 	position: absolute;
@@ -171,14 +184,28 @@ pre {
 	height: 100px;
 	left: 0;
 	bottom: 0;
-	background: rgba( 255, 255, 255, 0.3);
+	border-radius: 6px;
+	border: 1px solid #fff;
+	background-image: linear-gradient(-45deg, #ff9574, #f66ca2, #6cd8fe, #66ffdc, #d7ff74);
+	background-size: 800% 800%;
+	animation: gradient .4s linear infinite;
 	opacity: 0;
 	z-index: 0;
 	transition: .3s all ease;
+	mix-blend-mode: multiply;
 }
 
-#seals-div label input:checked:after {
+#seals-div label input:checked + span:after {
 	opacity: 1;
+	mix-blend-mode: normal;
+}
+
+#seals-div label:hover span:after {
+	opacity: .3;
+}
+
+input:disabled + span > img {
+  opacity: 0.5;
 }
 
 .sidebar {
@@ -227,7 +254,4 @@ footer p {
   font-size: 14px;
   line-height: 1.4;
   text-align: center;
-}
-input:disabled + img {
-  opacity: 0.2;
 }

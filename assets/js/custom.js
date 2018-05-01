@@ -15,7 +15,7 @@ function loadJSON(callback) {
 loadJSON(function(response) {
   jsonresponse = JSON.parse(response);
     Object.keys(jsonresponse).forEach(function(key) {
-      document.getElementById('seals-div').innerHTML += '<label><input type="radio" name="watermene" value="'+jsonresponse[key]+'" checked disabled><img src="'+jsonresponse[key]+'" alt="01"></label>';
+      document.getElementById('seals-div').innerHTML += '<label><input type="radio" name="watermene" value="'+jsonresponse[key]+'" checked disabled><span class="seal-img"><img src="'+jsonresponse[key]+'" alt="01"></span></label>';
     });
 });
 
