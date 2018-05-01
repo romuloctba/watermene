@@ -101,9 +101,21 @@ pre {
   max-width: 100%;
 }
 
+.icon {
+	max-width: 1em;
+	max-height: 1em;
+	display: inline-block;
+	fill: currentColor;
+}
+
+.btn {
+    min-width: 200px;
+}
+
 .btn-file {
   position: relative;
   overflow: hidden;
+  display: block;
 }
 
 .btn-file input[type=file] {
@@ -123,20 +135,28 @@ pre {
   display: block;
 }
 
+.img-input {
+	display: none;
+}
+
 .help-block {
   color: #fff;
   margin-bottom: 25px;
 }
 
-#preview {
-  text-align:left;
+#btn-download {
+	margin:  .5em 1em;
 }
-#preview small {
-  color: #fff;
+
+#preview img {
+  max-height: 50vh;
+  width: auto;
 }
 
 #preview-footer {
 	display: none;
+	margin-top: 20px;
+	font-size: .85em;
 }
 
 #seals-div {
@@ -247,11 +267,17 @@ input:disabled + span > img {
 #pooling-example .row {
   margin-bottom: 30px;
 }
-footer {
+
+#footer {
   padding-top: 1em;
 }
-footer p {
+
+#footer p {
   font-size: 14px;
   line-height: 1.4;
   text-align: center;
+}
+
+.show-after-upload {
+	display: none;
 }

@@ -21,12 +21,10 @@
 	</nav>
 
 	<div class="container">
-		<div class="row">
-			<!--page description-->
 
-		<div class="row">
+		<div class="row justify-content-between">
 			<!--upload form-->
-			<div class="col-md-6">
+			<div class="col-md-5">
 				<form action="" id="uploadForm" method="POST">
 
 					<h2>1. Envie seu mene</h2>
@@ -34,30 +32,41 @@
 					<div class="input-group" id="targetForm">
 						<span class="input-group-btn">
 							<span class="btn btn-primary btn-file">
+								<svg class="icon" x="0px" y="0px" viewBox="0 0 477.075 477.075" ><path d="M358.387,159.975h-38.9c-7.5,0-13.5,6-13.5,13.5s6,13.5,13.5,13.5h38.9c19.1,0,34.7,15.6,34.7,34.7v193.8    c0,19.1-15.6,34.7-34.7,34.7h-239.8c-19.1,0-34.7-15.6-34.7-34.7v-193.9c0-19.1,15.6-34.7,34.7-34.7h38.9c7.5,0,13.5-6,13.5-13.5    s-6-13.5-13.5-13.5h-38.9c-34,0-61.7,27.7-61.7,61.7v193.8c0,34,27.7,61.7,61.7,61.7h239.9c34,0,61.7-27.7,61.7-61.7v-193.8 C420.087,187.575,392.387,159.975,358.387,159.975z" style="fill: currentColor"></path><path d="M166.987,104.175l58-58v218c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-218l58,58c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4    c5.3-5.3,5.3-13.8,0-19.1l-81.1-81.1c-5.3-5.3-13.8-5.3-19.1,0l-81.1,81.1c-5.3,5.3-5.3,13.8,0,19.1    C153.187,109.475,161.687,109.475,166.987,104.175z"></path></svg>
 								Selecionar imagem <input type="file" id="target">
 							</span>
 						</span>
-						<input type="text" class="form-control" readonly style="display: none;">
+						<input type="text" class="form-control img-input" readonly>
 					</div>
 
 					<!--retry button-->
-					<button class="btn btn-default" id="reloader" style="display:none" onclick="window.location.reload()">
+					<button id="reloader" class="btn btn-light show-after-upload" onclick="window.location.reload()">
+						<svg class="icon" x="0px" y="0px" viewBox="0 0 489.935 489.935"><path d="M278.235,33.267c-116.7,0-211.6,95-211.6,211.7v0.7l-41.9-63.1c-4.1-6.2-12.5-7.9-18.7-3.8c-6.2,4.1-7.9,12.5-3.8,18.7
+								l60.8,91.5c2.2,3.3,5.7,5.4,9.6,5.9c0.6,0.1,1.1,0.1,1.7,0.1c3.3,0,6.5-1.2,9-3.5l84.5-76.1c5.5-5,6-13.5,1-19.1
+								c-5-5.5-13.5-6-19.1-1l-56.1,50.7v-1c0-101.9,82.8-184.7,184.6-184.7s184.7,82.8,184.7,184.7s-82.8,184.7-184.6,184.7
+								c-49.3,0-95.7-19.2-130.5-54.1c-5.3-5.3-13.8-5.3-19.1,0c-5.3,5.3-5.3,13.8,0,19.1c40,40,93.1,62,149.6,62
+								c116.6,0,211.6-94.9,211.6-211.7S394.935,33.267,278.235,33.267z"/></svg>
 						Começar denovo
 					</button>
 
 					<!--instructions-->
 					<div class="preview-wrapper">
-						<h2>2. Preview</h2>
-						<div class="" id="preview" style="display:none">
+						<header class="d-flex align-items-end">
+							<h2>2. Preview</h2>
+							<a id="btn-download" class="btn btn-primary show-after-upload" href="#" download>
+								Salvar imagem
+								<svg class="icon" x="0px" y="0px" viewBox="0 0 481 481"><path d="M230.95,394.3c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4l87.7-87.7c5.3-5.3,5.3-13.8,0-19.1c-5.3-5.3-13.8-5.3-19.1,0l-64.7,64.7 V13.5c0-7.5-6-13.5-13.5-13.5s-13.5,6-13.5,13.5v338.6l-64.7-64.7c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1L230.95,394.3z"/><path d="M439.55,354.7c-7.5,0-13.5,6-13.5,13.5V454H54.85v-85.8c0-7.5-6-13.5-13.5-13.5s-13.5,6-13.5,13.5v99.3 c0,7.5,6,13.5,13.5,13.5h398.3c7.5,0,13.5-6,13.5-13.5v-99.3C453.05,360.7,447.05,354.7,439.55,354.7z"/></svg>
+							</a>
+						</header>
+						<div class="" id="preview" class="show-after-upload">
 						</div>
-						<footer id="preview-footer">
+						<footer id="preview-footer" class="show-after-upload">
 							<div class="alert alert-warning alert-dismissible fade show">
 								Dica: Se a imagem ficou grandona, <strong>basta mudar a marca d'água uma vez</strong>, que ela se arruma (sim, é um bug).
 								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 								  <span aria-hidden="true">&times;</span>
 								</button>
 							</div>
-							<p><a id="btn-download" class="btn btn-primary" href="#" download>Salvar imagem</a></p>
 						</footer>
 					</div>
 
