@@ -76,46 +76,64 @@
 
 			<!--config seal-->
 			<div class="col-md-6">
-				<h2>3. Selos</h2>
-				<!--seals-->
-				<div class="radio" id="seals-div"></div>
+				<div class="section">
+					<h2>3. Selos</h2>
+					<!--seals-->
+					<div class="radio" id="seals-div"></div>
+				</div>
 
-				<div class="input-group col-xs-12">
+				<div class="section">
 					<h2>4. Posição</h2>
-					<div class="row">
-						<div class="col-xs-4">
-							<div class="radio">
-								<label><input type="radio" name="position" value="lowerRight" checked disabled>Inferior Direito</label>
+					<div class="position row">
+						<div class="normal-position">
+							<div class="radio upper-left">
+								<label>
+									<input type="radio" name="position" value="upperLeft" disabled>
+									<span class="position-radio-label">Superior Esquerdo</span>
+								</label>
 							</div>
-							<div class="radio">
-								<label><input type="radio" name="position" value="lowerLeft" disabled>Inferior Esquerdo</label>
+							<div class="radio upper-right">
+								<label>
+									<input type="radio" name="position" value="upperRight" disabled>
+									<span class="position-radio-label">Superior Direito</span>
+								</label>
 							</div>
-							<div class="radio">
-								<label><input type="radio" name="position" value="upperRight" disabled>Superior Direito</label>
+							<div class="radio center">
+								<label>
+									<input type="radio" name="position" value="center" disabled>
+									<span class="position-radio-label">Centro</span>
+								</label>
+							</div>
+							<div class="radio lower-left">
+								<label>
+									<input type="radio" name="position" value="lowerLeft" disabled>
+									<span class="position-radio-label">Inferior Esquerdo</span>
+								</label>
+							</div>
+							<div class="radio lower-right">
+								<label>
+									<input type="radio" name="position" value="lowerRight" checked disabled>
+									<span class="position-radio-label">Inferior Direito</span>
+								</label>
 							</div>
 						</div>
-						<div class="col-xs-4">
-							<div class="radio">
-								<label><input type="radio" name="position" value="upperLeft" disabled>Superior Esquerdo</label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="position" value="center" disabled>Centro</label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="position" value="custom" disabled><strong>Customizar</strong></label>
-							</div>
+						<div class="or">
+							<span>Ou</span>
 						</div>
-					</div>
-					<div class="row" id="range" style="display:none;">
-						<div class="col-xs-4"></div>
-						<div class="col-xs-3">
-							<div class="range" >
-								<label>Horizontal: <span id="horizontal-span">50</span><input type="range" min="0" max="100" value="50" name="horizontal"></label>
+						<div class="custom-position">
+							<div class="radio">
+								<label class="btn btn-sm btn-light">
+									<input type="radio" name="position" value="custom" disabled>
+									<span>Customizar</span>
+								</label>
 							</div>
-						</div>
-						<div class="col-xs-3">
-							<div class="range" >
-								<label>Vertical: <span id="vertical-span">50</span><input type="range" min="0" max="100" value="50" name="vertical"></label>
+							<div class="custom-position-sliders" id="range" style="display:none;">
+								<div class="range" >
+									<label><span class="axe">Horizontal:</span> <span class="position-span"><span id="horizontal-span">50</span>%</span> <input type="range" min="0" max="100" value="50" name="horizontal"></label>
+								</div>
+								<div class="range" >
+									<label><span class="axe">Vertical:</span> <span class="position-span"><span id="vertical-span">50</span>%</span> <input type="range" min="0" max="100" value="50" name="vertical"></label>
+								</div>
 							</div>
 						</div>
 					</div>

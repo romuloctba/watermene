@@ -160,14 +160,10 @@ pre {
 }
 
 #seals-div {
-  max-height: 400px;
+  max-height: 40vh;
   overflow: auto;
   display: flex;
   flex-wrap: wrap;
-}
-
-#seals-div label, .range label {
-  color: #fff;
 }
 
 #seals-div label {
@@ -226,6 +222,140 @@ pre {
 
 input:disabled + span > img {
   opacity: 0.5;
+}
+
+.position {
+	align-items: flex-start;
+}
+
+.normal-position {
+	background: rgba(255, 255, 255, 0.5);
+	overflow: auto;
+	margin: 15px;
+}
+
+.normal-position .radio  {
+	float: left;
+}
+
+.normal-position .radio label {
+	width: 50px;
+	padding: 5px;
+	display: block;
+	position: relative;
+	text-align: center;
+	line-height: 1.8;
+	cursor: pointer;
+	margin: 0;
+}
+
+.normal-position .radio label:hover {
+	background: #fff;
+}
+
+.normal-position .radio span {
+	display: none;
+}
+
+.normal-position .radio label:after {
+	content: '';
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	border: 2px solid #000;
+	position: absolute;
+    left: 50%;
+    top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.radio.upper-right,
+.radio.lower-right {
+	float: right;
+	margin-left: 30px;
+}
+
+.radio.center {
+	float: none;
+	clear: both;
+}
+
+.radio.center label {
+	margin: 0 auto;
+}
+
+
+.radio.upper-left label:after {
+	border-width: 2px 0 0 2px;
+}
+
+.radio.lower-left label:after {
+	border-width: 0 0 2px 2px;
+}
+
+.radio.upper-right label:after {
+	border-width: 2px 2px 0 0;
+}
+
+.radio.lower-right label:after {
+	border-width: 0 2px 2px 0;
+}
+
+.or {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: .6em;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 15px;
+}
+
+.or span {
+	height: 2.5em;
+	padding: .5em;
+	background: #fff;
+	border-radius: 50%;
+	background-image: linear-gradient(-45deg, #ff9574, #f66ca2, #6cd8fe, #66ffdc, #d7ff74);
+	background-size: 300% 300%;
+}
+
+.custom-position {
+	margin: 15px;
+	flex: 1 0 auto;
+}
+
+.custom-position label {
+	margin: 0;
+}
+
+.range {
+	margin-top: 1px;
+	font-size: .7em;
+}
+
+.range label {
+	padding: 5px 15px;
+	background: #fff;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.axe {
+	display: block;
+	font-weight: 700;
+	text-transform: uppercase;
+	flex: 1 0 100%;
+}
+
+.position-span {
+	min-width: 1.2em;
+	display: inline-block;
+    flex: 1 0 10%;
+}
+
+.range input {
+    flex: 1 0 auto;
 }
 
 .sidebar {
