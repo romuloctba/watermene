@@ -39,12 +39,8 @@ body {
   animation: gradient-pattern 15s linear infinite;
 }
 
-h1 {
-  font-size: 72px;
-}
-
-h2 {
-	margin-top: 45px;
+.section {
+	margin-top: 5vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
