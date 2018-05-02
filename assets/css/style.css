@@ -164,6 +164,27 @@ pre {
   overflow: auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+}
+
+
+#seals-div::-webkit-scrollbar-track
+{
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+#seals-div::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: transparent;
+}
+
+#seals-div::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background: #000;
 }
 
 #seals-div label {
