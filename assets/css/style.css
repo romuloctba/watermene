@@ -60,11 +60,6 @@ img {
   border: 0;
 }
 
-p {
-  color: #fff;
-  font-size: 22px;
-}
-
 pre {
   background: transparent;
   border: 0;
@@ -420,14 +415,12 @@ input:disabled + span > img {
 }
 
 #footer {
-  padding-top: 1em;
+  margin-top: 3vh;
+  padding: 5vh 0 4vh 0;
+  background: #000;
+  color: #ddd;
 }
 
-#footer p {
-  font-size: 14px;
-  line-height: 1.4;
-  text-align: center;
-}
 
 .show-after-upload {
 	display: none;
