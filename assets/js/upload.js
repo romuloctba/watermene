@@ -67,7 +67,6 @@
             posY = document.querySelector('input[name=vertical]').value;
         }
         alpha = document.querySelector('input[name=alpha]').value;
-        console.log('alpha is ', alpha);
         watermark([original, file])
             .image(watermark.image[position](alpha, posX, posY))
             .then(function(marked) {
