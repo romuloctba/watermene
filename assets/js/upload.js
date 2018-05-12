@@ -22,9 +22,12 @@
 
     function toggleSendImage () {
         document.querySelector('#targetForm').setAttribute('style', 'display: none');
-        document.querySelector('#targetHelp').setAttribute('style', 'display: none');
-        document.querySelector('#reloader').setAttribute('style', 'display: block');
-        document.querySelector('#preview').setAttribute('style', 'display: block');
+
+		var elementsToShow = document.getElementsByClassName('show-after-upload');
+
+		for (var i = 0; i < elementsToShow.length; i++) {
+		  elementsToShow[i].setAttribute('style', 'display: block');
+		}
     }
     /**
      * A listener that fires when the target image is selected
