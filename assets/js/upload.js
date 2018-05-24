@@ -55,7 +55,8 @@
             img = preview.querySelector('img'),
             position = document.querySelector('input[name=position]:checked').value,
             posX,
-            posY;
+            posY,
+            alpha;
 
         if (! original) {
             original = img;
@@ -65,9 +66,9 @@
             posX = document.querySelector('input[name=horizontal]').value;
             posY = document.querySelector('input[name=vertical]').value;
         }
-
+        alpha = document.querySelector('input[name=alpha]').value;
         watermark([original, file])
-            .image(watermark.image[position](0.8, posX, posY))
+            .image(watermark.image[position](alpha, posX, posY))
             .then(function(marked) {
                 preview.replaceChild(marked, img);
             });
